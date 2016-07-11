@@ -45,7 +45,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-div.score {
+.score {
   margin: 0 0 0 20px;
 }
 button.main {

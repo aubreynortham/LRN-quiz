@@ -123,6 +123,7 @@ $(document).ready(function(){
 
   //what question in the array we're starting on:
   var currentQuestion = 0;
+  var quizScore = 0;
 
   //select what gets displayed and in what html element:
   function printQuestion(){
@@ -139,10 +140,12 @@ $(document).ready(function(){
       $("#A, #B").effect("shake").toggle("drop");
       $("h2").html("Not quite! " + quizQuestions[currentQuestion].answer);
       //.delay isn't working
-
     } else {
       $("#A, #B").toggle("drop");
       $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
+      //update score
+      $("h3").html("Score: " + (quizScore + 1) + " / 10");
+      quizScore = parseFloat(quizScore + 1);
       console.log("this choice was true");//test!
     }
   })
@@ -156,12 +159,18 @@ $(document).ready(function(){
     } else {
       $("#A, #B").toggle("drop");
       $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
+      //update score
+      $("h3").html("Score: " + (quizScore + 1) + " / 10");
+      quizScore = parseFloat(quizScore + 1);
+
       console.log("this choice was true");//test!
     }
     // currentQuestion++;
   })
+
   //add nextQ button
   $("main").append("<button class='main' id='next'>Next question</button>");
+
 
   //run it!
   printQuestion();
