@@ -121,7 +121,7 @@ $(document).ready(function(){
     }
   ] //end of var quizQuestions array
 
-  //what question in the array are we on, at any given time:
+  //what question in the array we're starting on:
   var currentQuestion = 0;
 
   //select what gets displayed and in what html element:
@@ -135,7 +135,7 @@ $(document).ready(function(){
   $("#A").on("click", function(){
     console.log("you clicked the first one");//test!
     if (quizQuestions[currentQuestion].choices[0].correct === "false"){
-      console.log("this choice was false");
+      console.log("this choice was false");//test!
       $("#A, #B").effect("shake").toggle("drop");
       $("h2").html("Not quite! " + quizQuestions[currentQuestion].answer);
       //.delay isn't working
@@ -143,7 +143,7 @@ $(document).ready(function(){
     } else {
       $("#A, #B").toggle("drop");
       $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
-      console.log("this choice was true");
+      console.log("this choice was true");//test!
     }
   })
 
@@ -152,15 +152,16 @@ $(document).ready(function(){
     if (quizQuestions[currentQuestion].choices[1].correct === "false"){
       $("#A, #B").effect("shake").toggle("drop");
       $("h2").html("Not quite! " + quizQuestions[currentQuestion].answer);
-      console.log("this choice was false");
+      console.log("this choice was false");//test!
     } else {
       $("#A, #B").toggle("drop");
       $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
-      console.log("this choice was true");
+      console.log("this choice was true");//test!
     }
-
     // currentQuestion++;
   })
+  //add nextQ button
+  $("main").append("<button class='main' id='next'>Next question</button>");
 
   //run it!
   printQuestion();
