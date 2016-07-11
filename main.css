@@ -15,7 +15,7 @@ body {
   height:150px;
 }
 main.home {
-  margin: 0 40% 0 5%;
+  margin: 0 45% 0 10%;
 }
 main.quiz {
   margin: 20px 40px;
@@ -80,9 +80,10 @@ button.quiz {
   padding: 15px 30px 15px 30px;
   margin: 0 0 20px 0;
 }
-span#A, span#B {
+span.bold {
   color: rgb(71, 195, 46);
   font-size: 1.7em;
+  text-shadow: 2px 2px rgba(0,0,0,.5);
 }
 button.quiz:hover {
   box-shadow: 0 10px 25px 0 rgba(0,0,0,.75);
