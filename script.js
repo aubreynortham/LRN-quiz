@@ -1,6 +1,13 @@
 $(document).ready(function(){
 console.log("looking good");
 
+$("button#secondary").on("click", function(){
+  window.open("http://www.lynnhavenrivernow.org/pearl-homes/");
+})
+
+$("button#primary").on("click", function(){
+  window.location = "question_page.html";
+})
 
 });
 
