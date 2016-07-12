@@ -80,12 +80,25 @@ button.quiz {
   padding: 15px 30px 15px 30px;
   margin: 0 0 20px 0;
 }
-span.bold {
+.bold {
   color: rgb(71, 195, 46);
   font-size: 1.7em;
   text-shadow: 2px 2px rgba(0,0,0,.5);
 }
+.answerEmph {
+  color: rgb(71, 195, 46);
+  font-size: 1em;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(0,0,0,.5);
+  text-transform: uppercase;
+}
 button.quiz:hover {
   box-shadow: 0 10px 25px 0 rgba(0,0,0,.75);
   cursor: pointer;
+}
+#next {
+  float: right;
+  display: none;
+
+
 }

@@ -137,43 +137,56 @@ $(document).ready(function(){
     console.log("you clicked the first one");//test!
     if (quizQuestions[currentQuestion].choices[0].correct === "false"){
       console.log("this choice was false");//test!
-      $("#A, #B").effect("shake").toggle("drop");
-      $("h2").html("Not quite! " + quizQuestions[currentQuestion].answer);
-      //.delay isn't working
+      $(".quizButtons").effect("shake").toggle("drop", function(){
+        $("h2").html("<span class='answerEmph'>Not quite! </span>" + quizQuestions[currentQuestion].answer);
+        //add nextQ button
+        $("#next").css("display", "inline");
+      });
     } else {
-      $("#A, #B").toggle("drop");
-      $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
-      //update score
-      $("h3").html("Score: " + (quizScore + 1) + " / 10");
-      quizScore = parseFloat(quizScore + 1);
-      console.log("this choice was true");//test!
+      $(".quizButtons").toggle("drop", function(){
+        $("h2").html("<span class='answerEmph'>You got it! </span>" + quizQuestions[currentQuestion].answer);
+        //update score
+        $("h3").html("Score: " + (quizScore + 1) + " / 10");
+        quizScore = parseFloat(quizScore);
+        //add nextQ button
+        $("#next").css("display", "inline");
+        console.log("this choice was true");//test!
+      });
     }
   })
 
   $("#B").on("click", function(){
     console.log("you clicked the second one");//test!
     if (quizQuestions[currentQuestion].choices[1].correct === "false"){
-      $("#A, #B").effect("shake").toggle("drop");
-      $("h2").html("Not quite! " + quizQuestions[currentQuestion].answer);
-      console.log("this choice was false");//test!
+      $(".quizButtons").effect("shake").toggle("drop", function(){
+        $("h2").html("<span class='answerEmph'>Try again! </span>" + quizQuestions[currentQuestion].answer);
+        //add nextQ button
+        $("#next").css("display", "inline");
+        console.log("this choice was false");//test!
+      });
     } else {
-      $("#A, #B").toggle("drop");
-      $("h2").html("You're right! " + quizQuestions[currentQuestion].answer);
-      //update score
-      $("h3").html("Score: " + (quizScore + 1) + " / 10");
-      quizScore = parseFloat(quizScore + 1);
-
-      console.log("this choice was true");//test!
+      $(".quizButtons").toggle("drop", {complete: function(){
+        $("h2").html("<span class='answerEmph'>You're right! </span>" + quizQuestions[currentQuestion].answer);
+        //update score
+        $("h3").html("Score: " + (quizScore + 1) + " / 10");
+        quizScore = parseFloat(quizScore);
+        //add nextQ button
+        $("#next").css("display", "inline");
+        console.log("this choice was true");//test!
+      }});
     }
     // currentQuestion++;
   })
 
-  //add nextQ button
-  $("main").append("<button class='main' id='next'>Next question</button>");
 
 
   //run it!
   printQuestion();
+  //when user clicks nextQ, do the whole thing again:
+  $("#next").on("click", function(){
+    currentQuestion++;
+    printQuestion();
+  })
 
 });
 
