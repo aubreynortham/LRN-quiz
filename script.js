@@ -128,71 +128,53 @@ $(document).ready(function(){
   //select what gets displayed and in what html element:
   function printQuestion(){
     $("h2").html(quizQuestions[currentQuestion].question);
-    $(".quizButtons").show()
+    $(".quizButtons").show();
     $("#A").html( quizQuestions[currentQuestion].choices[0].content );
     $("#B").html( quizQuestions[currentQuestion].choices[1].content );
-    $("#next").css("display", "none");
+    $("#next").css("display", "inline");
   }
 
   //attach event listener based on correct true/false
   $("#A").on("click", function(){
-    console.log("you clicked the first one");//test!
     if (quizQuestions[currentQuestion].choices[0].correct === "false"){
-      console.log("this choice was false");//test!
       $(".quizButtons").effect("shake").toggle("drop", function(){
         $("h2").html("<span class='answerEmph'>Not quite! </span>" + quizQuestions[currentQuestion].answer);
-        //add nextQ button
-        $("#next").css("display", "inline");
       });
     } else {
       $(".quizButtons").toggle("drop", function(){
         $("h2").html("<span class='answerEmph'>You got it! </span>" + quizQuestions[currentQuestion].answer);
-        //update score
         $("h3").html("Score: " + (quizScore + 1) + " / 10");
         quizScore = parseFloat(quizScore + 1);
-        //add nextQ button
-        $("#next").css("display", "inline");
-        console.log("this choice was true");//test!
       });
     }
   })
 
   $("#B").on("click", function(){
-    console.log("you clicked the second one");//test!
     if (quizQuestions[currentQuestion].choices[1].correct === "false"){
       $(".quizButtons").effect("shake").toggle("drop", function(){
         $("h2").html("<span class='answerEmph'>Try again! </span>" + quizQuestions[currentQuestion].answer);
-        //add nextQ button
-        $("#next").css("display", "inline");
-        console.log("this choice was false");//test!
       });
     } else {
       $(".quizButtons").toggle("drop", {complete: function(){
         $("h2").html("<span class='answerEmph'>You're right! </span>" + quizQuestions[currentQuestion].answer);
-        //update score
         $("h3").html("Score: " + (quizScore + 1) + " / 10");
         quizScore = parseFloat(quizScore + 1);
-        //add nextQ button
-        $("#next").css("display", "inline");
-        console.log("this choice was true");//test!
       }});
     }
   })
 
-  // //check to see if user is on last question
-  // if (quizQuestions[currentQuestion] == 9){
-  //   $("#next").html("<button class='main' id='results'>See results</button>");
-  //   $("#next").on("click", function(){
-  //     window.location = "index.html";
-  //   })
-  // } else {
 
-  //run it!
   printQuestion();
-  //when user clicks nextQ, do the whole thing again:
+
   $("#next").on("click", function(){
-      currentQuestion++;
+    currentQuestion++;
+
+    if (currentQuestion < quizQuestions.length) {
+      console.log("not quite done");
       printQuestion();
+    } else {
+      console.log("should be done");
+    }
   })
 
 });

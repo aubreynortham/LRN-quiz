@@ -99,6 +99,17 @@ button.quiz:hover {
 #next {
   float: right;
   display: none;
-
-
+}
+#results {
+  float: right;
+  display: none;
+}
+#thanks {
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  line-height: 1em;
+  letter-spacing: 1px;
+  color: rgb(24, 45, 136);
+  font-size: 1.5em;
+  text-align: left;
 }
