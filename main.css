@@ -10,16 +10,18 @@ body {
   width: 800px;
   margin: auto;
   border-radius: 8px;
+  display: none;
 }
 .corner_logo {
   height:150px;
 }
-main.home {
+div.home {
   margin: 0 45% 0 10%;
 }
 main.quiz {
   margin: 20px 40px;
   padding: 20px;
+  display: none;
 }
 h1 {
   font-family: 'Hind', sans-serif;
@@ -45,8 +47,9 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.score {
+div.score {
   margin: 0 0 0 20px;
+  display: none;
 }
 button.main {
   background-color: rgb(26, 111, 19);

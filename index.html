@@ -4,17 +4,40 @@
   <meta charset="UTF-8">
   <title>LRN Pearl Homes Trivia</title>
   <link rel="stylesheet" href="main.css">
-  <link href='https://fonts.googleapis.com/css?family=Hind:400,600' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Hind:300,600" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 </head>
-<body class="home">
-  <a href="http://www.lynnhavenrivernow.org/"><img class="corner_logo" src="LRN corner logo.png"></a>
-  <main class="home">
-    <h1>What can your household do</br>to protect our environment?</h1>
-    <button class="main" id="primary">Take the quiz</button>
-    <button class="main" id="secondary">Become a Pearl Home</button>
 
-  </main>
-  <script src="script.js"></script>
-</body>
-</html>
+<body>
+  <a href="http://www.lynnhavenrivernow.org/"><img class="corner_logo" src="LRN corner logo.png"></a>
+
+  <button class="main" id="next">Next question</button>
+
+  <div class="score">
+    <h3>Score: 0 / 10</h3>
+  </div>
+
+
+<div class="home">
+  <h1>What can your household do</br>to protect our environment?</h1>
+  <button class="main" id="primary">Take the quiz</button>
+  <button class="main" id="secondary">Become a Pearl Home</button>
+</div>
+
+<div class="transparent">
+  <main class="quiz">
+    <h2>content</h2>
+    <div class="quizButtons">
+      <button class="quiz" id="A">
+        <span class="bold">A: </span>content</button>
+        <button class="quiz" id="B">
+          <span class="bold">B: </span>content</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+  </html>
