@@ -5,13 +5,8 @@ $(document).ready(function(){
     window.open("http://www.lynnhavenrivernow.org/pearl-homes/");
   })
   $("button#primary").on("click", function(){
-    $(".corner_logo").hide();
-    $("div.home").hide();
-    $("div.score").show();
-    $(".next").show();
-    $(".transparent").show();
-    $("main.quiz").show();
-    $("#next").show();
+    $(".corner_logo, div.home").hide();
+    $("div.score, .next, .transparent, main.quiz, #next").show();
   })
 
   //Quiz/Answer Page*****************************************************
@@ -131,7 +126,6 @@ $(document).ready(function(){
   var currentQuestion = 0;
   var quizScore = 0;
 
-  //select what gets displayed and in what html element:
   function printQuestion(){
     $("h2").html(quizQuestions[currentQuestion].question);
     $(".quizButtons").show();
@@ -168,20 +162,20 @@ $(document).ready(function(){
     }
   })
 
-
   printQuestion();
 
   $("#next").on("click", function(){
     currentQuestion++;
-
     if (currentQuestion < quizQuestions.length) {
       console.log("not quite done");
       printQuestion();
     } else {
       console.log("should be done");
+      $("#next").html("See results");
+      // $(".transparent, div.score, ").hide();
+
     }
   })
-
 });
 
 /*pseudocode overview:
