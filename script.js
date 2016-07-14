@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //Landing Page***********************************************************
   $("#secondary").on("click", function(){
-    window.open("http://www.lynnhavenrivernow.org/pearl-homes/");
+    window.open("http://www.surveymonkey.com/s/FYWTCSP");
   })
   $("#primary").on("click", function(){
     $(".corner_logo, div.home").hide();
@@ -137,7 +137,7 @@ $(document).ready(function(){
       $("#next").on("click", function(){
         $(".transparent, div.score, #next").hide();
         $(".corner_logo, div.home").show();
-        $("h1").html("You got " + quizScore + " / 10 questions correct!");
+        $("h1").html("You got " + quizScore + " / 10 questions correct!").css("font-size", "2.5em");
         $("h1").append("<p id='thanks'>Thank you for helping <b>Lynnhaven River Now</b> protect our community and our waterways by learning how to be more sustainable at home! Please take the time to apply for <b>PEARL HOME</b> certification today — click below to see how many requirements your household is already meeting, and to learn how you can keep improving!</p>");
         $("#primary").html("Redo quiz").on("click", function() {
           $("body").html(""); //creates a clean refresh
