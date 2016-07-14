@@ -117,3 +117,6 @@ p {
   text-align: left;
   text-transform: none;
 }
+.addthis_sharing_toolbox {
+  margin: 20px 0 0 0;
+}
