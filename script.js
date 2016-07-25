@@ -1,4 +1,11 @@
+/// This is a very well executed quiz project with a strong visual component. Your code is clean and mostly modular. I would group all the event listeners together, and place your data at the bottom, but that's just a suggestion. Your commenting was very thorough. I might recommend storing your references to DOM elements in variables to enhance the readibility of your code.
+
+/// An object oriented approach could simplify the data structure, but it might take time to get used to the OO approach. you could make 2 constructors-- one for the question and answer, and another for the options. the trickier part would be to integrate the 2
+
+/// See comments below for suggestions for improvement
+
 $(document).ready(function(){
+
 
   //Landing Page***********************************************************
   $("#secondary").on("click", function(){
@@ -9,6 +16,7 @@ $(document).ready(function(){
     $("div.score, .next, .transparent, main.quiz, #next").show();
   })
 
+  /// Excellent use of a detailed data-structure to store all of your program information!
   //Quiz/Answer Page*******************************************************
   var quizQuestions = [
     { //first question
@@ -129,10 +137,13 @@ $(document).ready(function(){
   function printQuestion(){
     $("h2").html(quizQuestions[currentQuestion].question);
     $(".quizButtons").show();
+
+    /// While this works well for your data structure, you could create a for loop to iterate over the choices array. It would be more lines of code, and maybe wouldn't make sense for your app as it is, it's worth noting that if you wanted to add more choices for some reason (and chaning the html to scale with new choices), the for loop would allow you to not have to write any additional code
     $("#A").html( quizQuestions[currentQuestion].choices[0].content );
     $("#B").html( quizQuestions[currentQuestion].choices[1].content );
     //listen for the last question: if so, display 'results page' on click
     if ( currentQuestion == (quizQuestions.length - 1) ) {
+      /// I would break this out into a separate function
       $("#next").html("See results");
       $("#next").on("click", function(){
         $(".transparent, div.score, #next").hide();
@@ -161,6 +172,7 @@ $(document).ready(function(){
       $(".quizButtons").toggle("drop", function(){
         $("h2").html("<span class='answerEmph'>You got it! </span>" + quizQuestions[currentQuestion].answer);
         $("h3").html("Score: " + (quizScore + 1) + " / 10"); //update score if correct
+        /// You could use an Int here instead, since you dont need the decimal. But isn't quizScore a number above? if it were a string, adding one would put a one on the end
         quizScore = parseFloat(quizScore + 1); //convert that variable back to a number
       });
     }
@@ -190,6 +202,8 @@ $(document).ready(function(){
     }
   })
 });
+
+///Yay pseudocode!
 
 /*pseudocode overview:
 company name links to LRN homepage
