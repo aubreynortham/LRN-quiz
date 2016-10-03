@@ -41,7 +41,7 @@ $(document).ready(function(){
         {content: "<span class='bold'>B. </span>Turn off the sprinklers and irrigate less frequently.",
         correct: true}
       ],
-      answer: "It's always a good idea to minimize the use of sprinklers to water the lawn and plants only when really needed. But when it comes to fertilizers, less is always better for the environment, and fertilizer use will not reduce your plants' water dependency. Before deciding to fertilizer your lawn or plants, always get a soil test first."
+      answer: "It's always a good idea to minimize the use of sprinklers and to water the lawn and plants only when really needed. But when it comes to fertilizers, less is always better for the environment, and fertilizer use will not reduce your plants' water dependency. Before deciding to fertilizer your lawn or plants, always get a soil test first."
     },
 
     { //fourth question
@@ -67,7 +67,7 @@ $(document).ready(function(){
     },
 
     { //sixth question
-      question: "Not all of your household waste products can be recycled. Choose which of these options is the right choice for the environment:",
+      question: "Which of these options is a responsible way to keep things clean around the house?",
       choices: [
         {content: "<span class='bold'>A. </span>Use any leftover cooking grease to help your kitchen's garbage disposal run more smoothly and save electricity in the long run.",
         correct: false},
@@ -82,40 +82,40 @@ $(document).ready(function(){
       choices: [
         {content: "<span class='bold'>A. </span>Install a rain barrel or cistern to collect the rain runoff from your property.",
         correct: true},
-        {content: "<span class='bold'>B. </span>Redirect your downspout to a paved surface or blacktop so it doesn’t drain directly into your propery’s gutters or drains.",
+        {content: "<span class='bold'>B. </span>Redirect your downspout to a paved surface or blacktop so it doesn’t drain directly into your propery’s stormdrains.",
         correct: false}
       ],
-      answer: "Redirect your downspout away from paved surfaces and onto plant beds or rain gardens where storm water can infiltrate the soil. Rain barrels can also be a great way to collect and reuse clean water around the house."
+      answer: "Redirect your downspout away from paved surfaces and onto plant beds or rain gardens where storm water can infiltrate the soil. Rain barrels can also be a great way to collect and reuse clean water around the yard."
     },
 
     { //eigth question
       question: "Households with property on the bay or the river have an important opportunity to make choices that keep our waterways healthy. If you live on the water, which should you choose?",
       choices: [
-        {content: "<span class='bold'>A. </span>Install a bulkhead at the edge of the water to create a responsible barrier between your property and the marine life.",
+        {content: "<span class='bold'>A. </span>Install a bulkhead at the edge of the water to create a physical barrier between your property and the Lynnhaven River.",
         correct: false},
-        {content: "<span class='bold'>B. </span>Start growing oysters on your own reefs.",
+        {content: "<span class='bold'>B. </span>Consider installing oyster castles and a living shoreline to protect against erosion.",
         correct: true}
       ],
-      answer: "Restoring our waterways' natural oyster population benefits the whole community, so we encourage waterfront residents to help grow oysters for conservation reefs. We also recommend avoiding bulkheads, which cause erosion problems, and install a living shoreline as a natural buffer instead."
+      answer: "Oyster castles and living shorelines are environmentall-friendly ways to protect your shoreline from erosion and provide water filtration and habitat for the river at the same time."
     },
 
     { //ninth question
-      question: "You can help everyone in your household make more sustainable choices by encouraging the right habits. Which investment do you think is better?",
+      question: "You can help everyone in your household make more sustainable choices by encouraging the right habits. Which habit do you think is better?",
       choices: [
-        {content: "<span class='bold'>A. </span>At the grocery store, choose disposable water bottles, utensils, and bags that are made with newer plastic material that is easier to break down.",
+        {content: "<span class='bold'>A. </span>At the grocery store, choose plastic bags since they are lightweight and easy to use.",
         correct: false},
-        {content: "<span class='bold'>B. </span>At the hardware store, look for 'low-flow' faucets and toilets to install in your own home.",
+        {content: "<span class='bold'>B. </span>When your family goes shopping, bring your own bags and try to buy fresh, local products.",
         correct: true}
       ],
-      answer: "Disposable plastic products are not good for the earth, and reusable bottles, shopping bags, etc. are a much better solution for the environment and for your wallet. Another smart choice is installing appliances that run more efficiently with less water required."
+      answer: "Plastic bags often end up as marine debris harming wildlife, and reusable bags are a much better solution for the environment and for your wallet. Supporting local vendors is another great way to reduce your carbon footprint, and that's more sustainable and healthier for you and the planet."
     },
 
     { //tenth question
-      question: "When it comes to chores around the house, how can you help make sure what's clean for your home is also clean for the environment?",
+      question: "When it comes to chores around the house, how can you help make sure what's clean for your family is also clean for the environment?",
       choices: [
-        {content: "<span class='bold'>A. </span>Avoid washing your car at home because it is not the best use of resources.",
+        {content: "<span class='bold'>A. </span>Avoid washing your car in the driveway.",
         correct: true},
-        {content: "<span class='bold'>B. </span>Avoid line-drying your laundry in the yard because it can introduce chemicals from the detergent into the environment.",
+        {content: "<span class='bold'>B. </span>Avoid line-drying your laundry in the yard.",
         correct: false}
       ],
       answer: "Line-drying laundry is a great way to take advantage of natural renewable resources like wind and solar power, and it poses no threat to the environment. Washing your car in the driveway, though, can send harmful chemicals right down the stormdrain and into our waterways. Instead, many local carwashes use filtration and recycled water systems to help with this problem."
